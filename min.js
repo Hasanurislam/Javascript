@@ -1,5 +1,2 @@
-console.log("hello")
-
-function add(){
-    return a + b
-}
+let fruit=`bana\`na`
+console.log(fruit)
