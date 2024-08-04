@@ -16,5 +16,6 @@ let text="Hello";
 console.log(text.at(4))
 
 let word="Please give me Rs 1000";
-let amount=word.slice("\nplese give me".length)
+let amount=Number.parseInt(word.slice("\nplese give me Rs".length))
 console.log(amount);
+console.log(typeof amount);
