@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Array Example</title>
+</head>
+<body>
+    <h1>JavaScript Array Example</h1>
+    <button onclick="arrayOperations()">Run Array Operations</button>
+    <p id="output"></p>
+
+    <script>
+        function arrayOperations() {
+            // Create an array
+            let fruits = ["Apple", "Banana", "Orange"];
+            let output = "";
+
+            // Display the original array
+            output += "Original Array: " + fruits + "<br>";
+
+            // Add an element to the end of the array
+            fruits.push("Mango");
+            output += "After adding Mango: " + fruits + "<br>";
+
+            // Remove the last element from the array
+            let removedFruit = fruits.pop();
+            output += "After removing " + removedFruit + ": " + fruits + "<br>";
+
+            // Add an element to the beginning of the array
+            fruits.unshift("Strawberry");
+            output += "After adding Strawberry to the beginning: " + fruits + "<br>";
+
+            // Remove the first element from the array
+            removedFruit = fruits.shift();
+            output += "After removing " + removedFruit + ": " + fruits + "<br>";
+
+            // Iterate through the array
+            output += "Iterating through the array:<br>";
+            for (let i = 0; i < fruits.length; i++) {
+                output += "Index " + i + ": " + fruits[i] + "<br>";
+            }
+
+            // Display the final array
+            document.getElementById("output").innerHTML = output;
+        }
+    </script>
+</body>
+</html>
