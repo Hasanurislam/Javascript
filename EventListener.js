@@ -1,19 +1,20 @@
-//let btns=document.querySelectorAll("button");
+let btn=document.querySelector("button");
 
-//btn.onclick=function (){
-  //  console.log("button was clicked");
-//}
+btn.addEventListener("click",function(){
+    let h1=document.querySelector("h1");
+    let getrandomcolor=randomcolor();
+    h1.innerText=getrandomcolor;
+    
+    let div=document.querySelector("div");
+    div.style.backgroundColor=getrandomcolor;
+    console.log("color updated");
+});
 
-for(btn of btns){
-  
-    addEventListener("click",sayhello);
-    addEventListener("click",sayname);
-}
+function randomcolor(){
+    let red=Math.floor(Math.random()*255);
+    let green=Math.floor(Math.random()*255);
+    let blue=Math.floor(Math.random()*255);
 
-
-function sayhello(){
-    alert("dont do this");
-}
- function sayname () {
-    alert("hi hasanur");
+    let color=`rgb(${red},${green},${blue})`;
+    return color
 }

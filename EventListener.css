@@ -13,3 +13,6 @@ div{
     width: 700px;
     border: 1px solid black;
 }
+button{
+    font-size: 20px;
+}
