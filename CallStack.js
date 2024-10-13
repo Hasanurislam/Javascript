@@ -51,22 +51,30 @@ function saveDb(data){
     return new Promise((resolve,reject)=>{
     let netspeed=Math.floor(Math.random()*10)+1;
     if(netspeed>4){
-        resolve("data saved");
+        resolve('data was saved');
     }
     else{
-        reject("data not saved");
+        reject('data was not saved');
     }
     })
 };
 
 saveDb("Hasanur")
-.then(()=>{
+.then((result)=>{
     console.log("data1 saved");
+    console.log(result);
     return saveDb("Zulfikar")
 })
-.then(()=>{
+.then((result)=>{
     console.log("data2 saved")
+    console.log(result)
+    return saveDb("Farid");
 })
-.catch(()=>{
+.then((result)=>{
+    console.log("data3 saved")
+    console.log(result)
+})
+.catch((error)=>{
     console.log("rejected");
+    console.log(error)
 })
