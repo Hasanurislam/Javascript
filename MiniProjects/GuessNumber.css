@@ -1,0 +1,28 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aqua;
+}
+.box-container{
+    border: 2px solid black;
+    width: 300px;
+    text-align: center;
+    background-color: antiquewhite;
+    
+}
+
+
+.guess{
+   display: flex;
+   justify-content: center;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+    
+}
+.txt{
+    text-align: center;
+}

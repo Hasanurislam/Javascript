@@ -1,10 +1,14 @@
 /*h1=document.querySelector("h1");
 
-function changecolor(color,delay,nextcolor){
-    setTimeout(function(){
-        h1.style.color=color;
-        if(nextcolor) nextcolor();
-    },delay);
+function changecolor(color){
+    return new Promise((resolve,reject)=>{
+        setTimeout(function(){
+            h1.style.color=color;
+            resolve("color change");
+        
+        },delay);
+
+    })
 };
 
 changecolor("red",1000,()=>{
@@ -14,7 +18,7 @@ changecolor("red",1000,()=>{
         })
     })
 })
-*/
+
 /*function saveDb(data,success,failure){
     let netspeed=Math.floor(Math.random()*10)+1;
     if(netspeed>4){
@@ -47,7 +51,7 @@ changecolor("red",1000,()=>{
 );
 
 */
-function saveDb(data){
+/*function saveDb(data){
     return new Promise((resolve,reject)=>{
     let netspeed=Math.floor(Math.random()*10)+1;
     if(netspeed>4){
@@ -78,3 +82,52 @@ saveDb("Hasanur")
     console.log("rejected");
     console.log(error)
 })
+*/
+
+
+/*async function greet(){
+    throw("error occour")
+    return "hello";
+}
+
+greet()
+.then((result)=>{
+  console.log("promise was accepted",result)
+})
+.catch((error)=>{
+    console.log("promise was rejected=",error)
+})
+*/
+
+let h1=document.querySelector("h1");
+
+function changecolor(color,delay){
+    return new Promise((resolve,reject)=>{
+        let num=Math.floor(Math.random()*5)+1;
+        if(num>4){
+            reject("color not changed")
+        }
+        setTimeout(function(){
+            h1.style.color=color;
+            console.log(`color change to ${color}`)
+            resolve("color change");
+        },delay);
+
+    })
+};
+
+async function getcolor(){
+    try{
+    await changecolor("red",1000)
+    await changecolor("yellow",1000)
+    await changecolor("green",1000)
+} catch(error){
+        console.log("error caught")
+        console.log(error)
+    }
+
+    let a=5;
+    console.log(a+3);
+}
+
+getcolor();
