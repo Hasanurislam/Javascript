@@ -1,0 +1,45 @@
+body{
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(#4203a9,#90bafc);
+    font-family: sans-serif;
+}
+.container{
+    font-size: 40px;
+    width: 100%;
+    max-width: 600px;
+    margin-left: 10%;
+    margin-top: 10%;
+    border-left: 5px solid yellow;
+
+}
+.container h1{
+    color: white;
+    margin: 10px;
+
+}
+.container h1 span{
+    color:yellow;
+}
+.container input{
+    font-size: 30px;
+    margin: 20px;
+    cursor: pointer;
+
+}
+#btn{
+    margin: 10px;
+    font-size: 30px;
+    background-color: yellow;
+    padding: 1%;
+    border-radius: 10px;
+    cursor: pointer;
+    
+}
+.container h3{
+    color: white;
+    margin: 10px;
+    font-size: 30px;
+}
