@@ -43,7 +43,7 @@ btn.addEventListener("click",function(){
             day= dob_day-currentdob_day
         }
         
-        h3.innerText=`Your are ${year} year ${mounth} mounth ${day} day old`
+        h3.innerText=`Your are ${year} year ${mounth} month ${day} day old`
       
 
     
