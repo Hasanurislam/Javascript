@@ -6,14 +6,37 @@
     <title>DOM</title>
 </head>
 <body>
-    
+    <style>
+        body{
+            background-color: black;
+            color: aliceblue;
+        }
+    </style>
+    <ul class="langluse">
+        <li>javascript</li>
+    </ul>
     
 </body>
 <script>
-    let div=document.createElement("div");
+   /* let div=document.createElement("div");
     console.log(div);
     div.innerHTML="hello is a created div by using javascript";
     //div.appendchild(b);
-    document.body.appendChild(div)
+    document.body.appendChild(div)*/
+    function addlanguse(lan){
+        const li=document.createElement("li");
+        li.innerHTML=`${lan}`;
+        document.querySelector(".langluse").appendChild(li);
+    }
+    addlanguse("python")
+    addlanguse("ruby")
+
+    function addlan(lang){
+        const li=document.createElement("li");
+        li.appendChild(document.createTextNode(lang));
+        document.querySelector(".langluse").appendChild(li);
+    }
+    addlan("golang");
+
 </script>
 </html>
